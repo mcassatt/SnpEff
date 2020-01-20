@@ -1004,7 +1004,7 @@ public class VcfEntry extends Marker implements Iterable<VcfGenotype> {
 
 			// Add genotype fields (lazy parse)
 			if (fields.length > 9) genotypeFieldsStr = fields[9];
-		} else throw new RuntimeException("Impropper VCF entry: Not enough fields (missing tab separators?).\n" + line);
+		} else throw new RuntimeException("Improper VCF entry: Not enough fields (missing tab separators?).\n" + line);
 	}
 
 	/**
@@ -1138,7 +1138,7 @@ public class VcfEntry extends Marker implements Iterable<VcfGenotype> {
 			break;
 
 		default:
-			throw new RuntimeException("WARNING: Unkown IUB code for SNP '" + altsStr + "'");
+			throw new RuntimeException("WARNING: Unknown IUB code for SNP '" + altsStr + "'");
 		}
 
 		return alts;
